@@ -27,20 +27,12 @@ except:
     sys.exit(-1)
 
 # Numpy for datastructures
-try:
-    import numpy as np
-except:
-    print("Failed to import numpy package.")
-    sys.exit(-1)
+import numpy as np
 
 # Cityscapes modules
-try:
-    from annotation   import Annotation
-    from labels       import labels, name2label, id2label, trainId2label, category2labels
-except:
-    print("Failed to find all Cityscapes modules")
-    sys.exit(-1)
-
+from annotation   import Annotation
+from labels       import labels, name2label, id2label, trainId2label, category2labels
+    
 # Print an error message and quit
 def printError(message):
     print('ERROR: ' + str(message))
